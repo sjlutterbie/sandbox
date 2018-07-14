@@ -1,0 +1,25 @@
+<html>
+    <body>
+
+        <h1>This is a simple interactive form:</h1>
+            First name:<br/>
+            <input type="text" id="firstName"><br/>
+            Last name:<br/>
+            <input type="text" id="lastName"><br/>
+            <button onclick="displayResults()">Submit</button>
+        <p id="results">&nbsp;</p>
+        <script>
+            function displayResults() {
+                var firstName = document.getElementById('firstName').value;
+                var lastName = document.getElementById('lastName').value;
+                var htmlString = (
+                        '<strong>First name:</strong> ' +
+                        firstName + '<br/>' +
+                        '<strong>Last name:</strong> ' +
+                        lastName
+                    );
+                document.getElementById('results').innerHTML = htmlString;
+            }
+        </script>
+    </body>
+</html>
